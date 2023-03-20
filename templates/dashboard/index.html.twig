@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% if app.user %}
+        <div class="mt-3">
+            <h6>You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a></h6>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
